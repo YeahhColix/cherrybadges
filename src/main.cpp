@@ -70,7 +70,7 @@ namespace CGlobal {
             {"partner", "Partner.png"_spr},
             {"stargrinder", "SG.png"_spr},
             {"demonslayer", "DS.png"_spr},
-            {"listmoderator", "LM.png"_spr}
+            {"listmoderator", "ListModerator.png"_spr}
         };
 
         if (spriteMap.count(role_name) == 0) {
