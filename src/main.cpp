@@ -137,7 +137,7 @@ class $modify(XProfilePage, ProfilePage) {
             {"musician", "musician"},
             {"grinder", "star grinder"},
             {"media", "active in cherry team's social media"},
-            {"listmoderator", "hi"}
+            {"listmoderator", "hi"},
             {"record", "recording showcases for cherry team members"}
         };
         static std::map<std::string, std::string> roleMap2 = {
