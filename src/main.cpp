@@ -8,26 +8,9 @@ using namespace geode::prelude;
 
 namespace CGlobal {
     std::map<std::string, std::vector<std::string>> members = {
-        {"unknown", {"cherryteam", "LordVadercraft", "vagunaru", 
-            "Maybbee", "hxkxrxdnxss",  "Flame5252", "LolsShow", 
-			"nikverr", "Partur", "VerMir24", "Pes11"}}, // CT_badge_01_002.png would be loaded
-        {"tech", {"dogotrigger", "jaizereal", "pineapplecat", "TobyAdd"}},
-        {"creator", {"eseattle", "Louree", "winchester94", "kissskisss", "Kanati", 
-            "pufiksunduk", "akek0", "yoncawave", "Beateo", "saures", "vust",
-            "H4ss1um", "CHRAPIVA", "HypereliX", "Kivvvi",
-			"extxzyyyy", "azhir", "extxzyyyy", "Leftyy", "viperarctarus",
-			"HatPlayer"}},
-        {"musician", {"BlastiXCore", "enipoint"}},
-        {"leader", {"qmystic", "ElizabethaGames", "inex"}},
-        {"artist", {"maximaldash", "pineapplecat", "hantein", "HelpegasuS", "wintermonster"}},
-        {"media", {"Zhopolom", "qRosen", "MaFFaKa", "Finnonie"}},
-        {"record", {"Luster3", "blessedmt", "ElPaan", "ShadowPlayerOL", "midix"}}
+        {"listmoderator", {"YeahhColix"}}
     };
 
-    std::vector<std::string> staff = {
-        "lordvadercraft", "vagunaru", "maffaka", "qmystic", "elizabethagames", "partur",
-		"extxzyyyy"
-    };
 
     template <typename T>
     bool objectExists(const T& target, const std::vector<T>& vec) {
@@ -83,20 +66,15 @@ namespace CGlobal {
         if (!isFound) return nullptr;
 
         static std::map<std::string, std::string> spriteMap = {
-            {"unknown", "CT_badge_01_002.png"_spr},
-            {"tech", "CT_badge_07_001.png"_spr},
-            {"creator", "CT_badge_06_001.png"_spr},
-            {"artist", "CT_badge_05_001.png"_spr},
-            {"slayer", "CT_badge_04_001.png"_spr},
-            {"musician", "CT_badge_03_001.png"_spr},
-            {"grinder", "CT_badge_02_001.png"_spr},
-            {"media", "CT_badge_01_001.png"_spr},
-            {"leader", "CT_badge_01_003.png"_spr},
-            {"record", "CT_badge_01_001.png"_spr}
+            {"booster", "Booster.png"_spr},
+            {"partner", "Partner.png"_spr},
+            {"stargrinder", "SG.png"_spr},
+            {"demonslayer", "DS.png"_spr},
+            {"listmoderator", "LM.png"_spr}
         };
 
         if (spriteMap.count(role_name) == 0) {
-            log::error("cherry team role cannot be found for user {}: unknown role \"{}\"", _username, role_name);
+            log::error("role cannot be found for user {}: unknown role \"{}\"", _username, role_name);
 
             return nullptr;
         }
@@ -159,6 +137,7 @@ class $modify(XProfilePage, ProfilePage) {
             {"musician", "musician"},
             {"grinder", "star grinder"},
             {"media", "active in cherry team's social media"},
+            {"listmoderator", "hi"}
             {"record", "recording showcases for cherry team members"}
         };
         static std::map<std::string, std::string> roleMap2 = {
