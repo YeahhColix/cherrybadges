@@ -113,13 +113,6 @@ class $modify(XProfilePage, ProfilePage) {
 
             return;
         }
-        if (CGlobal::objectExists<std::string>(CGlobal::lowercaseString(CGlobal::currentUsername), CGlobal::staff)) {
-            std::string text = fmt::format("{} is <cp>cherry team staff</c>. {} can suggest people <cy>to join the cherry team</c>.", CGlobal::currentUsername, CGlobal::currentUsername);
-
-            FLAlertLayer::create(popupTitle.c_str(), text, "OK")->show();
-
-            return;
-        }
 
         std::string str = fmt::format("{} is the <cy>member</c> of <cr>cherry team</c>.", CGlobal::currentUsername);
 
